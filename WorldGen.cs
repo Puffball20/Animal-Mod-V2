@@ -13,7 +13,7 @@ namespace AnimalWeaponsv2
     {
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
         {
-            int shiniesIndex = tasks.FindIndex(GenPass => GenPass.Name.Equals("Shinies"));
+            int shiniesIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Shinies"));
             if(shiniesIndex != -1)
             {
                 tasks.Insert(shiniesIndex + 1, new PassLegacy("Animal Weapons V2 Ore Generation", OreGeneration));
